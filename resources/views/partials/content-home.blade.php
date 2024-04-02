@@ -43,7 +43,7 @@
             <h1>What's Your Zipcode?</h1>
             <select name="zipcode" id="zipcode">
                 @fields('zipcode_c')
-                    <option value="@sub('zipcode')">@sub('zipcode')</option>
+                    <option value="@sub('available')">@sub('zipcode')</option>
                 @endfields
             </select>
             <button onclick="finish()">Continue</button>
@@ -129,7 +129,10 @@
 
     function finish(){
         
-      Ccounter++
+      var x = document.getElementById("zipcode").value;
+      if(x == "Available"){
+        Ccounter++;
+      }   
       document.getElementById("zip").classList.remove("active");
       document.getElementById("loading").classList.add("active");
       document.getElementById('title').innerHTML = 'Reviewing your answers';
@@ -141,7 +144,7 @@
         document.getElementById('title').innerHTML = 'Confirming eligibility';
     }, 2000);
     
-if(Ccounter < 2){
+if(Ccounter < 1){
 
 
     setTimeout(() => {
@@ -151,7 +154,7 @@ if(Ccounter < 2){
     }, 3000);
 
 
-    }else if(Ccounter >= 2){
+    }else if(Ccounter >= 1){
 
         setTimeout(() => {
             document.getElementById('title').innerHTML = "";
