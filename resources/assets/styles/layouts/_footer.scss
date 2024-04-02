@@ -13,10 +13,12 @@ footer {
     display: flex;
     gap: 10px;
     .img {
+      img{
       max-width: 40px;
       max-height: 40px;
       width: 100%;
       object-fit: contain;
+      }
     }
     .text {
       display: flex;

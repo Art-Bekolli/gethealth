@@ -1,7 +1,7 @@
 .hero_section{
     padding: 95px;
     @include mobile{
-        padding: 95px 0;
+        padding: 95px 10px;
     }
     h1{
         font-size: 1.75rem;
@@ -237,10 +237,16 @@
             color: #274066;
             font-weight: 400;
         }
+        img{
+            max-width: 127px;
+            width: 100%;
+            object-fit: contain;
+        }
     }
     .ratings{
         display: flex;
         align-items: center;
+        justify-content: center;
         color: #4D4D4D;
         gap: 25px;
         flex-wrap: wrap;
@@ -250,6 +256,11 @@
         }
         h2{
             font-size: 1.1rem;
+        }
+        img{
+            max-width: 127px;
+            width: 100%;
+            object-fit: contain;
         }
     }
 }

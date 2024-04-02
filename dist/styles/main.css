@@ -285,7 +285,7 @@ footer .top {
   display: flex;
   gap: 10px;
 }
-footer .top .img {
+footer .top .img img {
   max-width: 40px;
   max-height: 40px;
   width: 100%;
@@ -345,12 +345,12 @@ body#tinymce {
 }
 @media only screen and (max-width: 767px) {
   .hero_section {
-    padding: 95px 0;
+    padding: 95px 10px;
   }
 }
 @media only screen and (min-device-width: 360px) and (max-device-width: 820px) and (orientation: landscape) {
   .hero_section {
-    padding: 95px 0;
+    padding: 95px 10px;
   }
 }
 .hero_section h1 {
@@ -674,6 +674,12 @@ body#tinymce {
   color: #274066;
   font-weight: 400;
 }
+.reviews_section .card img {
+  max-width: 127px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .reviews_section .ratings {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -681,6 +687,9 @@ body#tinymce {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #4D4D4D;
   gap: 25px;
   -ms-flex-wrap: wrap;
@@ -692,6 +701,12 @@ body#tinymce {
 }
 .reviews_section .ratings h2 {
   font-size: 1.1rem;
+}
+.reviews_section .ratings img {
+  max-width: 127px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /*# sourceMappingURL=main.css.map*/
